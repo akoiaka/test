@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+    <html lang="fr">
+
+    <head>
+        <meta charset="UTF-8">
+        <script
+      src="https://code.jquery.com/jquery-3.2.1.js"
+      integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+      crossorigin="anonymous">
+        </script>
+        <title>Exos javascript</title>
+    </head>
+
+    <body>
+          <audio id="Psycho" preload="auto" src="./Talking Heads - Psycho Killer Remastered Hq.mp3"></audio>
+          <audio id="Schubert" preload="auto" src="./SchubertMoments MusicalN3.mp3"/></audio>
+
+          <!-- <label for="nom">Quel est votre nom</label><br> -->
+
+              <!-- <label for="nom">Nom :</label> -->
+              <input type="text" id="nom" value="" placeholder="entrez votre nom"/>
+
+          <br/><br/>
+
+              <!-- <label for="age">Age :</label> -->
+              <input type="text" id="age" value="" placeholder="entrez votre age"/>
+              <br/><br/>
+
+              <button id="clic" onclick="Playsong();">VALIDER</button>
+
+              <p id="texte" ></p>
+<!--ajouter un boutton questionnant-->
+
+<!--ICI LE SCRIPT JQUERY-->
+
+        <!-- <script>
+        jQuery(document).ready(function(){
+           // Du code en jQuery va pouvoir être tapé ici !
+       });
+        </script> -->
+
+<!--ICI LE SCRIPT JAVASCRIPT-->
+<script>
+//écrire dans le html avec javascipt
+function Playsong (){
+
+        var Age = document.getElementById("age").value;
+        var Nom = document.getElementById("nom").value;
+
+
+        if (Age < 18){
+          player = document.getElementById("Schubert");
+        }
+        else{
+          player = document.getElementById("Psycho");
+        }
+        player.play();
+      }
+
+      </script>
+
+
+
+    </body>
+</html>
